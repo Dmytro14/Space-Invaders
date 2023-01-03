@@ -102,20 +102,20 @@ public class MysteryShip : MonoBehaviour
         {
             Despawn();
 
-            int index = Random.Range(1, 2);
+            int index = Random.Range(1, 5);
 
             switch(index)
             {
                 case 1: gameManager.BonusHp(); break;
-                // case 2: {
-                //     player.BonusSpeed();
-                //     player.spriteRenderer.color = Color.yellow;
-                //     } break;
-                // case 3: bunkers.ResetBunkers(); break;
-                // case 4: {
-                //     player.bonus = true;
-                //     player.spriteRenderer.color = Color.red;
-                //  }break;
+                case 2: {
+                    player.BonusSpeed();
+                    player.spriteRenderer.color = Color.yellow;
+                    } break;
+                case 3: bunkers.ResetBunkers(); break;
+                case 4: {
+                    player.bonus = true;
+                    player.spriteRenderer.color = Color.red;
+                    } break;
                 }
 
             if (killed != null) {
